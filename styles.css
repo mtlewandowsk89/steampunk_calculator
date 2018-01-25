@@ -1,0 +1,302 @@
+/* @font-face {
+  font-family: digital;
+  src: url(digital-7.regular.ttf);
+} */
+.fullContainer {
+  margin: 50px auto;
+  position: relative;
+  width: 600px;
+}
+
+.calculator {
+  position: relative;
+  background: url('calc_bg.jpg');
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 350px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.inputArea {
+  border: 10px solid black;
+  border-radius: 5px;
+  width: 300px;
+  overflow: hidden;
+  background-color: rgba(101, 71, 3, 0.58);
+  padding-left: 10px;
+  display: block;
+  margin: 10px auto 21px;
+  height: 50px;
+  font-size: 50px;
+}
+
+.inputText {
+  font-size: 34px;
+  padding-top: 6px;
+  font-family: 'Vast Shadow', cursive;
+  float: right;
+}
+
+.line {
+  position: absolute;
+  width: 1px;
+  height: 20px;
+  background-color: #484646;
+}
+
+.line:first-child {
+  left: 20px;
+}
+
+.line:nth-child(2) {
+  left: 40px;
+}
+
+.line:last-child {
+  left: 60px;
+}
+
+.buttonArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.buttonArea:last-child {
+  margin-bottom: 20px;
+}
+
+.button {
+  width: 55px;
+  margin: 10px;
+  height: 54px;
+  font-size: 20px;
+  font-family: 'Vast Shadow', cursive;
+  border: 3px solid #b37f0b;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #ddd;
+}
+
+.button:focus {
+  text-decoration: none;
+  border: none;
+}
+
+.equals {
+  width: 50%;
+  border-radius: 10px;
+  background: #000;
+  color: #fff;
+}
+
+.operator {
+  background: #000;
+  color: #fff;
+}
+
+.clear {
+  background: #982626;
+  color: #fff;
+}
+
+.gear {
+  position: absolute;
+  top: 70px;
+  right: 106px;
+  width: 100px;
+  height: 100px;
+  border: 20px solid #442004;
+  border-radius: 50%;
+  z-index: -1;
+}
+.gear:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 40px;
+  right: -35px;
+  width: 20px;
+  height: 20px;
+  background-color: #442004;
+}
+.gear:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -35px;
+  right: 40px;
+  width: 20px;
+  height: 20px;
+  background-color: #442004;
+}
+.gear-teeth {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-color: #442004;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.tooth1 {
+  top: 94px;
+  right: -12px;
+}
+
+.tooth2 {
+  top: 94px;
+  right: 94px;
+}
+
+.tooth3 {
+  top: -14px;
+  right: 94px;
+}
+
+.tooth4 {
+  top: -15px;
+  right: -12px;
+}
+
+.tooth5 {
+  position: absolute;
+  top: 115px;
+  right: 40px;
+  width: 20px;
+  height: 20px;
+  background-color: #442004;
+}
+
+.tooth6 {
+  position: absolute;
+  top: 40px;
+  right: 115px;
+  width: 20px;
+  height: 20px;
+  background-color: #442004;
+}
+
+.spin {
+  -webkit-animation: spin 1s infinite linear;
+  animation: spin 1s infinite linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(90deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+
+.gear2 {
+  position: absolute;
+  top: -9px;
+  left: 115px;
+  z-index: -1;
+  width: 10px;
+  height: 10px;
+  border: 20px solid #442004;
+  border-radius: 50%;
+  animation-fill-mode: forwards;
+  animation-direction: reverse;
+}
+.gear2:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #442004;
+  top: 17px;
+  left: 17px;
+}
+.gear2:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #442004;
+  top: -17px;
+  left: 17px;
+}
+.gear2-teeth {
+  position: absolute;
+  background-color: #442004;
+  height: 10px;
+  width: 10px;
+}
+
+.spike1 {
+  top: -17px;
+  left: -17px;
+}
+.spike1:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #442004;
+  top: -7px;
+  left: 17px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.spike1:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #442004;
+  top: 41px;
+  left: 17px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.spike2 {
+  top: 17px;
+  left: -17px;
+}
+.spike2:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #442004;
+  top: -17px;
+  left: 41px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.spike2:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #442004;
+  top: -17px;
+  left: -7px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+
+
+
+
